@@ -1,0 +1,7 @@
+{
+  "game-death-swamp": "You took a wrong turn and got stuck in the swamp, a robot came kill you",
+  "game-death-wolf-nest": "You took a wrong turn and fell into a wolf nest, you know what happens next",
+  "game-death-drown": "You drowned in your attempt to swim",
+  "game-death-night-freeze": "You freezed to death in the night",
+  "game-death-climb": "You died while climbing"
+}

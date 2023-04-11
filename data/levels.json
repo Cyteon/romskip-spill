@@ -1,0 +1,254 @@
+{
+  "game-level-start": {
+    "name": "Wake Up",
+    "messages": [
+      "You wake up in a building",
+      "You dont know where you are"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": [
+      "left",
+      "right"
+    ],
+    "destinations": {
+      "left": "game-level-forest-1",
+      "right": "game-death-swamp"
+    }
+  },
+  "game-level-forest-1": {
+    "name": "Forest Entrance",
+    "messages": [
+      "You entered a forest",
+      "You can hear the sound of birds"
+    ],
+    "items": [
+      "stick"
+    ],
+    "chests": [],
+    "exits": ["forward", "left"],
+    "destinations": {
+      "forward": "game-level-forest-2",
+      "left": "game-level-forest-3"
+    }
+  },
+  "game-level-forest-2": {
+    "name": "Somewhere in the forest",
+    "messages": [
+      "You hear something behind you",
+      "You look around",
+      "You seem to have forgot the way back"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["backwards", "left"],
+    "destinations": {
+      "backwards": "game-death-wolf-nest",
+      "left": "game-level-forest-3",
+      "right": "game-level-forest-1"
+    }
+  },
+  "game-level-forest-3": {
+    "name": "Somewhere in the forest",
+    "messages": [
+      "You look around",
+      "It looks the same, but you know its not"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["right"],
+    "destinations": {
+      "right": "game-level-lake-1"
+    }
+  },
+  "game-level-lake-1": {
+    "name": "Front of lake",
+    "messages": [
+      "You found a lake",
+      "Its not really big, you think you can swim over",
+      "Maybe go around?"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["swim", "around"],
+    "destinations": {
+      "swim": "game-death-drown",
+      "around": "game-level-lake-2"
+    }
+  },
+  "game-level-lake-2": {
+    "name": "Other side of lake",
+    "messages": [
+      "You made it to the other side",
+      "You can see something shining in the water"
+    ],
+    "items": ["shiny-key"],
+    "chests": [],
+    "exits": ["forward", "right"],
+    "destinations": {
+      "forward": "game-level-cave-1",
+      "right": "game-death-night-freeze"
+    }
+  },
+  "game-level-cave-1": {
+    "name": "Small cave",
+    "messages": [
+      "You found a cave and went into it",
+      "You didnt freeze to death "
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["out"],
+    "destinations": {
+      "out": "game-level-forest-opening-1"
+    }
+  },
+  "game-level-forest-opening-1": {
+    "name": "Forest opening",
+    "messages": [
+      "You went out of the cave",
+      "Its morning now",
+      "You spot something shiny on your right"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["left", "right"],
+    "destinations": {
+      "left": "game-level-big-cave-1",
+      "right": "game-level-forest-opening-bush-1"
+    }
+  },
+  "game-level-forest-opening-bush-1": {
+    "name": "A bush in forest opening",
+    "messages": [
+      "You found something shiny"
+    ],
+    "items": ["spaceship-part-1"],
+    "chests": [],
+    "exits": ["back"],
+    "destinations": {
+      "back": "game-level-forest-opening-1"
+    }
+  },
+  "game-level-big-cave-1": {
+    "name": "Big cave",
+    "messages": [
+      "You went into the big cave",
+      "You can see something looking like a chest",
+      "You hope you brought the shiny key"
+    ],
+    "items": [],
+    "chests": ["chest-shiny-1"],
+    "exits": ["deeper", "back"],
+    "destinations": {
+      "deeper": "game-level-big-cave-1",
+      "back": "game-level-forest-opening-1"
+    }
+  },
+  "game-level-big-cave-2": {
+    "name": "Deeper in big cave",
+    "messages": [
+      "You went deeper into the big cave",
+      "You see an exit you can climb out of"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["climb"],
+    "destinations": {
+      "climb": "game-level-mountain-floor-1"
+    }
+  },
+  "game-level-mountain-floor-1": {
+    "name": "Mountain floor",
+    "messages": [
+      "You are on the floor of a mountain",
+      "You see something shining on the mountain"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["climb", "right"],
+    "destinations": {
+      "climb": "game-level-mountain-floor-2",
+      "right": "game-level-forest-4"
+    }
+  },
+  "game-level-mountain-floor-2": {
+    "name": "Mountain floor, higher up",
+    "messages": [
+      "You climbed andfound another mountain floor",
+      "You can see something looking like a chest",
+      "You think there might be more on the top"
+    ],
+    "items": ["spaceship-part-2"],
+    "chests": [],
+    "exits": ["climb", "back"],
+    "destinations": {
+      "climb": "game-death-climb",
+      "back": "game-level-mountain-floor-1"
+    }
+  },
+  "game-level-forest-4": {
+    "name": "Forest Entrance",
+    "messages": [
+      "You found another forest"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-5"
+    }
+  },
+  "game-level-forest-5": {
+    "name": "Forest path",
+    "messages": [
+      "The path turn right, but you think about going forward"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward", "left"],
+    "destinations": {
+      "forward": "game-level-forest-5-2",
+      "left": "game-level-forest-6"
+    }
+  },
+  "game-level-forest-5-2": {
+    "name": "Away from forest path",
+    "messages": [
+      "You see something in a tree"
+    ],
+    "items": ["spaceship-part-3"],
+    "chests": [],
+    "exits": ["back"],
+    "destinations": {
+      "back": "game-level-forest-5"
+    }
+  },
+  "game-level-forest-6": {
+    "name": "Forest path",
+    "messages": [
+      "You keep going down the forest path",
+      "You spot a wrench on the ground",
+      "If you dont have one, you will need this"
+    ],
+    "items": ["wrench"],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-7"
+    }
+  },
+  "game-level-forest-7": {
+    "name": "Forest path",
+    "messages": [
+      "You keep going down the forest path",
+      "You find a bronze dagger, you dont think you will need this"
+    ],
+    "items": ["bronze-dagger"],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-8"
+    }
+  }
+}

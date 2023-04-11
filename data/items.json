@@ -1,0 +1,17 @@
+{
+	"stick": {"name":"stick", "demage":"1"},
+	"shiny-key": {"name":"shiny key", "demage":"0"},
+	"bronze-dagger": {"name": "bronze dagger", "demage": "3"},
+	"wrench": {"name": "wrench", "demage":"0"},
+	"apple": {"name":"apple", "demage":"-2"},
+	"spaceship-part-1": {"name":"spaceship part 1", "demage": "1/10"},
+	"spaceship-part-2": {"name":"spaceship part 2", "demage": "2/10"},
+	"spaceship-part-3": {"name":"spaceship part 3", "demage": "3/10"},
+	"spaceship-part-4": {"name":"spaceship part 4", "demage": "4/10"},
+	"spaceship-part-5": {"name":"spaceship part 5", "demage": "5/10"},
+	"spaceship-part-6": {"name":"spaceship part 6", "demage": "6/10"},
+	"spaceship-part-7": {"name":"spaceship part 7", "demage": "7/10"},
+	"spaceship-part-8": {"name":"spaceship part 8", "demage": "8/10"},
+	"spaceship-part-9": {"name":"spaceship part 9", "demage": "9/10"},
+	"spaceship-part-10": {"name":"spaceship part 10", "demage": "10/10"}
+}

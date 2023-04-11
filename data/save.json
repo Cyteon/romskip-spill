@@ -1,0 +1,10 @@
+{
+    "name": "e",
+    "health": 20,
+    "inventory": [
+        "1/10",
+        "stick",
+        "shiny-key"
+    ],
+    "level": "game-level-forest-opening-1"
+}
