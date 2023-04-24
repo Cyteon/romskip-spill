@@ -250,5 +250,138 @@
     "destinations": {
       "forward": "game-level-forest-8"
     }
+  },
+  "game-level-forest-opening-2": {
+    "name": "Forest opening",
+    "messages": [
+      "The path ends here",
+      "You are in a forest opening now",
+      "You spot a lake on your side, maybe swim over?"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["swim", "forward"],
+    "destinations": {
+      "swim": "game-death-drown",
+      "forward": "game-level-plains-1"
+    }
+  },
+  "game-level-plains-1": {
+    "name": "Plains",
+    "messages": [
+      "You enter a plains biome",
+      "You see a lake in the distance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-plains-2"
+    }
+  },
+  "game-level-plains-2": {
+    "name": "Plains near lake",
+    "messages": [
+      "You can see something in the lake",
+      "Maybe dive?"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["dive"],
+    "destinations": {
+      "dive": "game-level-lake-underwater-1"
+    }
+  },
+  "game-level-lake-underwater-1": {
+    "name": "Diving in lake",
+    "messages": [
+      "You are diving in the lake",
+      "You should surface so you dont die"
+    ],
+    "items": ["spaceship-part-4"],
+    "chests": [],
+    "exits": ["surface"],
+    "destinations": {
+      "surface": "game-level-lake-3"
+    }
+  },
+  "game-level-lake-3": {
+    "name": "Other side of lake",
+    "messages": [
+      "You surface on the other side of the lake",
+      "You spot a mountain in the distance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward", "right"],
+    "destinations": {
+      "forward": "game-level-mountain-floor-3"
+    }
+  },
+  "game-level-mountain-floor-3": {
+    "name": "Mountain floor",
+    "messages": [
+      "You are on the floor of a mountain",
+      "There is a path going up"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-mountain-path-1"
+    }
+  },
+  "game-level-mountain-path-1": {
+    "name": "Mountain path",
+    "messages": [
+      "You are on a mountain path",
+      "The path ends here, but you see something hanging on a mountain side tree"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["climb"],
+    "destinations": {
+      "forward": "game-level-mountain-side-tree-1"
+    }
+  },
+  "game-level-mountain-side-tree-1": {
+    "name": "Mountain side tree",
+    "messages": [
+      "You made it to the tree in one piece",
+      "You see a chest, you recognice whats inside it"
+    ],
+    "items": ["spaceship-part-5"],
+    "chests": [],
+    "exits": ["back"],
+    "destinations": {
+      "back": "game-level-lake-3"
+    }
+  },
+  "game-level-valley-1": {
+    "name": "Valley",
+    "messages": [
+      "You are in a valley",
+      "You can spot a river",
+      "You can see a bridge in the distance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-valley-2"
+    }
+  },
+  "game-level-valley-2": {
+    "name": "Other side of river in valley",
+    "messages": [
+      "You went over the bridge to the other side",
+      "You look around and see a cave in the distance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-valley-3"
+    }
   }
 }

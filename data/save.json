@@ -1,10 +1,8 @@
 {
-    "name": "e",
+    "name": "yes",
     "health": 20,
     "inventory": [
-        "1/10",
-        "stick",
-        "shiny-key"
+        "0/10"
     ],
-    "level": "game-level-forest-opening-1"
+    "level": "game-level-start"
 }
