@@ -189,6 +189,7 @@ def level(level, character, restart):
                     else:
                         character.health += healing
                 elif choice == "no":
+                    
                     pass
             else:
                 choice = input(

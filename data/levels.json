@@ -383,5 +383,95 @@
     "destinations": {
       "forward": "game-level-valley-3"
     }
+  },
+  "game-level-valley-3": {
+    "name": "Valley near cave",
+    "messages": [
+      "You went to the cave and think about down into it"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["down", "right"],
+    "destinations": {
+      "down": "game-level-valley-cave-1",
+      "right": "game-level-valley-4"
+    }
+  },
+  "game-level-valley-cave-1": {
+    "name": "Valley cave",
+    "messages": [
+      "You went into the cave",
+      "You see something in the distance"
+    ],
+    "items": ["spaceship-part-6"],
+    "chests": [],
+    "exits": ["back"],
+    "destinations": {
+      "back": "game-level-valley-3"
+    }
+  },
+  "game-level-valley-4": {
+    "name": "Valley near cave",
+    "messages": [
+      "You went to the cave and think about down into it"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["down", "left"],
+    "destinations": {
+      "down": "game-level-valley-cave-1",
+      "left": "game-level-forest-8"
+    }
+  },
+  "game-level-forest-8": {
+    "name": "Forest",
+    "messages": [
+      "You are in a forest",
+      "You see a path going forward"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-9"
+    }
+  },
+  "game-level-forest-9": {
+    "name": "Forest",
+    "messages": [
+      "You keep following the forest path"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-10"
+    }
+  },
+  "game-level-forest-10": {
+    "name": "Forest",
+    "messages": [
+      "You keep following the forest path, it goes right now",
+      "You stub into something on the path"
+    ],
+    "items": ["spaceship-part-7"],
+    "chests": [],
+    "exits": ["right"],
+    "destinations": {
+      "right": "game-level-forest-11"
+    }
+  },
+  "game-level-forest-11": {
+    "name": "Forest",
+    "messages": [
+      "You keep following the forest path",
+      "You see a river in the distance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-12"
+    }
   }
 }
