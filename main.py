@@ -1,3 +1,10 @@
+"""
+Målet med spillet mitt er å få alle 8 delene til romskipet.
+For å gjøre dette må du gå gjennom alle stedene og finne alle delene.
+Men noen steder er det farlig, så du må passe på at du ikke dør.
+For å bevege deg rundt i spillet må du skrive inn veiene som står ved valgene.
+"""
+
 import json
 import sys
 import os
