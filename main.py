@@ -82,7 +82,8 @@ def get_item(character, item): # Legg ting inn i inventory
 
 def main(died, character=""): # Hovedfunksjonen
     if devmode: # Dev-modus
-        print("----- \033[96m\033[1m[               Devmode is enabled              ]\033[0m")
+        #print("----- \033[96m\033[1m[               Devmode is enabled              ]\033[0m") med skriftfarge som ikke funket
+        print("----- [               Devmode is enabled              ]")
 
     if save_data == {} or died:
         print("No save found, creating new......\n\n")
