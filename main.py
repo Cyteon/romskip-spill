@@ -227,34 +227,33 @@ def level(level, character, restart): # Level funksjonen
             print(f"{choice} is not a valid way")
             load_level(character, True)
 
-    match choice:
-        case "0":
-            sys.exit("Exited")
-        case "1":
+    if choice == 0:
+        sys.exit("Exited")
+    elif choice == 1:
+        erase_save()
+        main(False)
+    elif choice == 2:
+        clear()
+        print(f"----- Spaceship Parts: {character.inventory[0]}")
+        print(f"----- Inventory: {character.inventory[1:]}")
+        load_level(character, True)
+    elif choice == 3:
+        if devmode:
+            save_game(character)
+            print("----- Saved game")
+        load_level(character, True)
+    elif choice == 4:
+        if devmode:
             erase_save()
-            main(False)
-        case "2":
-            clear()
-            print(f"----- Spaceship Parts: {character.inventory[0]}")
-            print(f"----- Inventory: {character.inventory[1:]}")
-            load_level(character, True)
-        case "3":
-            if devmode:
-                save_game(character)
-                print("----- Saved game")
-            load_level(character, True)
-        case "4":
-            if devmode:
-                erase_save()
-                print("----- Save erased")
-            load_level(character, True)
-        case "5":
-            if devmode:
-                character.inventory[0] = "8/8"
-                character.inventory.append("wrench")
-            load_level(character, True)
-        case _:
-            choices()
+            print("----- Save erased")
+        load_level(character, True)
+    elif choice == 5:
+        if devmode:
+            character.inventory[0] = "8/8"
+            character.inventory.append("wrench")
+        load_level(character, True)
+    else:
+        load_level(character, True)
 
 
 def death(data, character): # Død funksjonen
