@@ -103,7 +103,7 @@ def main(died, character=""): # Hovedfunksjonen
 
     #save_game(character)
 
-    if died is False:
+    if died is False: # Si hvordan du spiller om du ikke døde
         print("\n----- Weclome to this text RPG")
         print("----- Your goal is to get all 8 spaceship parts")
         print("----- On each level you will get your available ways to go")
@@ -112,7 +112,7 @@ def main(died, character=""): # Hovedfunksjonen
         if devmode: # Dev-modus
             print("----- Devmode Shortcuts: 3 = save game, 4 = erase save, 5 = instant win\n")
 
-    load_level(character, False)
+    load_level(character, False) # Last in level
 
 
 def assemble(character): # Sett sammen romskipet
@@ -138,13 +138,13 @@ def load_level(character, restart): # Last inn level
     if not devmode:
         save_game(character)
 
-    if "8/8" in character.inventory:
+    if "8/8" in character.inventory: # Sjekk om du har alle delene
         assemble(character)
     level(levels_data[character.level], character, restart)
 
 
 def level(level, character, restart): # Level funksjonen
-    if restart:
+    if restart: # Skriv meldingene om du ikke har restartet levelen, som når du dør
         pass
     else:
         print("")
@@ -158,7 +158,7 @@ def level(level, character, restart): # Level funksjonen
     exits = level["exits"]
     chests = level["chests"]
 
-    if restart:
+    if restart: # Spør om å åpne kister og plukke opp ting om du ikke har restartet levelen
         pass
     else:
         for chest in chests:
