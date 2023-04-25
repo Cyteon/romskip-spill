@@ -413,21 +413,20 @@
   "game-level-valley-4": {
     "name": "Valley near cave",
     "messages": [
-      "You went to the cave and think about down into it"
+      "You are at an forest entrance, you can see a path going forward"
     ],
     "items": [],
     "chests": [],
-    "exits": ["down", "left"],
+    "exits": ["forward"],
     "destinations": {
-      "down": "game-level-valley-cave-1",
-      "left": "game-level-forest-8"
+      "forward": "game-level-forest-8"
     }
   },
   "game-level-forest-8": {
     "name": "Forest",
     "messages": [
       "You are in a forest",
-      "You see a path going forward"
+      "You follow the path going forward"
     ],
     "items": [],
     "chests": [],
@@ -464,8 +463,7 @@
   "game-level-forest-11": {
     "name": "Forest",
     "messages": [
-      "You keep following the forest path",
-      "You see a river in the distance"
+      "You keep following the forest path"
     ],
     "items": [],
     "chests": [],
@@ -473,5 +471,83 @@
     "destinations": {
       "forward": "game-level-forest-12"
     }
+  },
+  "game-level-forest-12": {
+    "name": "Forest",
+    "messages": [
+      "You keep following the forest path",
+      "You think you spot another crashed spaceship in the distance"  
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-13"
+    }
+  },
+  "game-level-forest-13": {
+    "name": "Forest",
+    "messages": [
+      "You keep following the forest path",
+      "You are at the spaceship entrance"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "forward": "game-level-forest-spaceship-1"
+    }
+  },
+  "game-level-forest-spaceship-1": {
+    "name": "Spaceship in forest",
+    "messages": [
+      "You are inside the crashed spaceship",
+      "Nobody seems to be alive here"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["forward"],
+    "destinations": {
+      "back": "game-level-forest-spaceship-2"
+    }
+  },
+  "game-level-forest-spaceship-2": {
+    "name": "Spaceship in forest",
+    "messages": [
+      "You keep carefully exploring the spaceship",
+      "there is a crossing, should you go left or right?"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["left", "right"],
+    "destinations": {
+      "left": "game-level-forest-spaceship-3",
+      "right": "game-level-forest-spaceship-4"
+    }
+  },
+  "game-level-forest-spaceship-3": {
+    "name": "Room to the left in spaceship",
+    "messages": [
+      "You went left",
+      "The room appears to be empty, only a bed and table"
+    ],
+    "items": [],
+    "chests": [],
+    "exits": ["back"],
+    "destinations": {
+      "back": "game-level-forest-spaceship-2"
+    }
+  },
+  "game-level-forest-spaceship-4": {
+    "name": "Room to the right in spaceship",
+    "messages": [
+      "You went right",
+      "The room appears to be the engine room",
+      "You search for parts you can use in your spaceship"
+    ],
+    "items": ["spaceship-part-8"],
+    "chests": [],
+    "exits": [],
+    "destinations": {}
   }
 }

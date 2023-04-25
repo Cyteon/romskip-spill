@@ -6,7 +6,7 @@ import time
 def clear():
     print('\n' * 49)
 
-devmode = True
+devmode = False
 
 class Character:
     def __init__(self, name, health, inventory, level):
@@ -74,12 +74,12 @@ def get_item(character, item):
 
 def main(died, character=""):
     if devmode:
-        print("----- \033[96m\033[1mDevmode is enabled\033[0m")
+        print("----- \033[96m\033[1m[               Devmode is enabled              ]\033[0m")
 
     if save_data == {} or died:
         print("No save found, creating new......\n\n")
         character = Character(
-            input("Enter character name > "), 20, ["0/10"], "game-level-start")
+            input("Enter character name > "), 20, ["0/8"], "game-level-start")
     else:
         level = levels_data[save_data["level"]]
 
@@ -89,7 +89,7 @@ def main(died, character=""):
             character = Character(
                 save_data["name"], save_data["health"], save_data["inventory"], save_data["level"])
         elif choice == "no":
-            character = Character(input("Enter character name > "), 20, ["0/10"], "game-level-start")
+            character = Character(input("Enter character name > "), 20, ["0/8"], "game-level-start")
         else:
             sys.exit("invalid choice bruh")
 
@@ -97,7 +97,7 @@ def main(died, character=""):
 
     if died is False:
         print("\n----- Weclome to this text RPG")
-        print("----- Your goal is to get all 10 spaceship parts")
+        print("----- Your goal is to get all 8 spaceship parts")
         print("----- On each level you will get your available ways to go")
         print("----- To select one, type in your choice and press enter\n")
         print("----- Shortcuts: 0 = exit, 1 = restart, 2 = inventory")
@@ -113,7 +113,7 @@ def assemble(character):
         print("----- Starting spaceship assembly")
         time.sleep(2)
         clear()
-        print("----- Used 10/10 spaceship parts")
+        print("----- Used 8/8 spaceship parts")
         time.sleep(1)
         print("----- Used wrench")
         time.sleep(2)
@@ -121,7 +121,7 @@ def assemble(character):
         print("----- Your spaceship is ready")
         print("----- Thank you for playing")
         time.sleep(2)
-        sys.exit("---- Exited")
+        sys.exit("----- Exited")
     else:
         print("----- A wrench is needed to assemble spaceship")
 
@@ -130,7 +130,7 @@ def load_level(character, restart):
     if not devmode:
         save_game(character)
 
-    if "10/10" in character.inventory:
+    if "8/8" in character.inventory:
         assemble(character)
     level(levels_data[character.level], character, restart)
 
@@ -164,7 +164,7 @@ def level(level, character, restart):
             elif choice == "no":
                 pass
         for item in items:
-            if items_data[item]["demage"].endswith("/10"):
+            if items_data[item]["demage"].endswith("/8"):
                 print(f"You just found {items_data[item]['name']}!")
                 print("It has been added to your inventory \n")
                 character.inventory[0] = items_data[item]["demage"]
@@ -242,7 +242,7 @@ def level(level, character, restart):
             load_level(character, True)
         case "5":
             if devmode:
-                character.inventory[0] = "10/10"
+                character.inventory[0] = "8/8"
                 character.inventory.append("wrench")
             load_level(character, True)
         case _:
