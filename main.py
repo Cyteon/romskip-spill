@@ -13,18 +13,19 @@ import time
 def clear():
     print('\n' * 49)
 
-devmode = False
+devmode = False # Dev-modus
 
-class Character:
+class Character: # Karakteren
     def __init__(self, name, health, inventory, level):
         self.name = name
         self.health = health
         self.inventory = inventory
         self.level = level
 
-if not os.path.exists("./data/save.json"):
+if not os.path.exists("./data/save.json"): # Sjekk om save.json er der
     with open("./data/save.json", "w"): pass
 
+# Last in alle filer
 save_raw = open("./data/save.json")
 levels_raw = open("./data/levels.json")
 deaths_raw = open("./data/deaths.json")
@@ -56,7 +57,7 @@ except json.decoder.JSONDecodeError:
     time.sleep(5)
     sys.exit("⚠️    ITEM DATA CORRUPTED    ⚠️")
 
-def save_game(character):
+def save_game(character): # Lagre spillet
     character_data = {
         "name": character.name,
         "health": character.health,
@@ -70,17 +71,17 @@ def save_game(character):
         f.write(json_data)
 
 
-def erase_save():
+def erase_save(): # Slett lagringen
     with open("./data/save.json", "w") as f:
         f.write("{}")
 
 
-def get_item(character, item):
+def get_item(character, item): # Legg ting inn i inventory
     character.inventory.append(item)
 
 
-def main(died, character=""):
-    if devmode:
+def main(died, character=""): # Hovedfunksjonen
+    if devmode: # Dev-modus
         print("----- \033[96m\033[1m[               Devmode is enabled              ]\033[0m")
 
     if save_data == {} or died:
@@ -108,13 +109,13 @@ def main(died, character=""):
         print("----- On each level you will get your available ways to go")
         print("----- To select one, type in your choice and press enter\n")
         print("----- Shortcuts: 0 = exit, 1 = restart, 2 = inventory")
-        if devmode:
+        if devmode: # Dev-modus
             print("----- Devmode Shortcuts: 3 = save game, 4 = erase save, 5 = instant win\n")
 
     load_level(character, False)
 
 
-def assemble(character):
+def assemble(character): # Sett sammen romskipet
     if "wrench" in character.inventory:
         clear()
         print("----- Starting spaceship assembly")
@@ -133,7 +134,7 @@ def assemble(character):
         print("----- A wrench is needed to assemble spaceship")
 
 
-def load_level(character, restart):
+def load_level(character, restart): # Last inn level
     if not devmode:
         save_game(character)
 
@@ -142,7 +143,7 @@ def load_level(character, restart):
     level(levels_data[character.level], character, restart)
 
 
-def level(level, character, restart):
+def level(level, character, restart): # Level funksjonen
     if restart:
         pass
     else:
@@ -256,11 +257,11 @@ def level(level, character, restart):
             choices()
 
 
-def death(data, character):
+def death(data, character): # Død funksjonen
     print(deaths_data[data])
     print("Going back to last level in 5...")
     time.sleep(5)
     main(True, character)
 
 
-main(False)
+main(False) # Starter spillet
