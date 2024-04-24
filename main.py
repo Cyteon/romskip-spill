@@ -13,7 +13,7 @@ import time
 def clear():
     print('\n' * 49)
 
-devmode = False # Dev-modus
+devmode = True # Dev-modus
 
 class Character: # Karakteren
     def __init__(self, name, health, inventory, level):
@@ -211,6 +211,7 @@ def level(level, character, restart): # Level funksjonen
     print(f"Avaible ways to go are: {exits}")
 
     choice = input(f"Level: {level_name} | Health: {character.health} | Name: {character.name} > ")
+    print(choice)
 
     def choices():
         if choice in exits:
@@ -254,7 +255,7 @@ def level(level, character, restart): # Level funksjonen
             character.inventory.append("wrench")
         load_level(character, True)
     else:
-        load_level(character, True)
+        choices()
 
 
 def death(data, character): # Død funksjonen
