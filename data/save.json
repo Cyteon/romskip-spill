@@ -1,8 +1,0 @@
-{
-    "name": "test",
-    "health": 20,
-    "inventory": [
-        "0/8"
-    ],
-    "level": "game-level-start"
-}
